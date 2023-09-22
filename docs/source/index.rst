@@ -183,7 +183,11 @@ root
 - **地址：** 北京师范大学科技楼C区1005A室
 
 .. image:: ./_static/images/shaw.png
-   :alt: Structure
-   :align: left
+   :alt: 联系方式
+   :align: center
    :width: 400
    :height: 200
+
+
+祝好～
+^^^^^^^^
