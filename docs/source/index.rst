@@ -169,6 +169,10 @@ root
 
 - **地址：** 北京师范大学科技楼C区1005A室
 
+.. image:: ./_static/images/shaw.png
+   :alt: Structure
+   :align: left
+
 
 【下载地址】
 ^^^^^^^^
