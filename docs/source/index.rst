@@ -33,12 +33,17 @@
          1.2.1 **回帖数据**:
 
 .. csv-table:: Frozen Delights!
- :header: "Treat", "Quantity", "Description"
- :widths: 15, 10, 30
- "Albatross", 2.99, "On a stick!"
- "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
- crunchy, now would it?"
- "Gannet Ripple", 1.99, "On a stick!"
+   :header: "字段", "类型", "描述"
+   :widths: 15, 10, 30
+   "index", int, "待编码文本的唯一标识符，是回帖ID"
+   "user_id", int, "回帖的用户ID"
+   "user_name", str, "回帖的用户昵称"
+   "reply_content", str, "回帖内容"
+   "topic_id", int, "回帖的话题ID"
+   "reply_id", int, "回帖ID"
+   "to_reply_id", int, "回帖的父级回帖ID"
+   "reason", str, "编码理由，这一列可以空着"
+
 
 +------------+------------+-----------+
 | 字段  | 类型  | 描述  |
