@@ -14,6 +14,7 @@
 
    当前项目还在开发中，以后会提供更多的功能，敬请期待。
 
+
 操作流程图
 -----------------
 
@@ -21,16 +22,32 @@
    :alt: Structure
    :align: center
 
-1. **准备数据**: 
-   准备数据，包括编码用的API_key，待编码的数据和编码规则。
+项目目录结构
+-----------------
+root
+   |_ api_key.txt
+   |_ coding_scheme
+      |_ coding_scheme.csv
+   |_ input
+      |_ reply.csv
+      |_ topic.csv
+   |_ output
+   |_ AICodingAssistant.exe
+
+1 **准备数据**: 
+准备数据，包括编码用的API_key，待编码的数据和编码规则。
 
    1.1 **API_key**: 
-       从Open Food Facts申请API_key，用于获取食品数据。
+   申请API_key，用于调用编码接口。
+   申请地址：https://api2d.com/
+   API_key查看地址：https://api2d.com/forward_key/list
+   API_key示例：fk203018-8OyNua...
+   复制API_key到剪贴板，然后将其粘贴到api_key.txt文件中。
 
-   1.2 **待编码的数据**:
+   1.2 **input (csv)**:
 
 .. csv-table:: 回帖数据
-   :align: center
+   :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
 
@@ -44,7 +61,7 @@
    "reason", str, "编码理由，这一列可以空着"
 
 .. csv-table:: 话题数据
-   :align: center
+   :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
 
@@ -53,7 +70,7 @@
    "topic_content", str, "话题内容，一半是话题的详细描述，这里可以空着"
 
 .. csv-table:: 编码规则
-   :align: center
+   :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
 
@@ -62,15 +79,21 @@
    "indicators", str, "编码指标"
    "example", str, "指标的示例（这一列可以不要）"
 
+2 **Check and handle formatting errors**: 
+查看output文件夹下面coding_error.txt文件，如果有编码错误，需要手动处理。
+复制coding_error.txt中的每一行数据，到coding_result.txt文件中搜索，找到对应的数据，然后手动处理将其更正为标准数据格式。
+处理完毕后，删除coding_error.txt文件或删除文件中的所有数据。
+Note：推荐使用vs code 打开coding_result.txt文件，可以它可以高亮显示大部分错误。
 
-2. **Turn on coding**: 
-   Turn on coding, and the system will automatically code the data.
+.. code-block:: 标准的数据格式如下
+   {"reply_id":"557092","tags":["E-3"],"reason":["回帖中提到了对教师备课的重要作用，这符合编码表中的建议和思考（E-3），即对建议进行考虑"]}
 
-3. **Check and handle formatting errors**: 
-   Check and handle formatting errors.
+常见的错误有：
+- 末尾缺少一个“}”，请补充。
+- reason中有英文的引号，请在英文引号前添加转义符“\”。
+- 末尾多了一个逗号，请删除。
+- 一行数据包含了多个结果，如{...},{...}，请将其拆分为多行。
+- 一样数据包含多个结果，但其中一个结果是错误的，如{...},reply_id...}，显然，reply_id前缺少一个“{”，请将错误的结果补全并拆分。
 
-.. code-block:: console
-   (.venv) $ pip install lumache
 
-4. **All data is coded**: 
-   All data is coded, and the coding is completed.
+暂时写这么多吧，应该够用了，有问题可以联系我（微信：etshaw8888），谢谢！
