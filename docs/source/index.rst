@@ -16,37 +16,44 @@
 
 
 操作流程图
------------------
+^^^^^^^^
 
 .. image:: ./_static/images/structure.jpg
    :alt: Structure
    :align: center
 
 项目目录结构
------------------
+^^^^^^^^
+
 root
    |_ api_key.txt
+
    |_ coding_scheme
       |_ coding_scheme.csv
    |_ input
       |_ reply.csv
+
       |_ topic.csv
    |_ output
+
    |_ AICodingAssistant.exe
 
 使用说明
------------------
-1 **准备数据**: 
-准备数据，包括编码用的API_key，待编码的数据和编码规则。
+^^^^^^^^
 
-   1.1 **API_key**: 
+编码前的准备工作
+>>>>>>>>>
+
+1 **在开始编码之前，你需要准备以下数据**: 
+
+   1.1 **API_key，放在api_key.txt文件中**: 
    申请API_key，用于调用编码接口。
    申请地址：https://api2d.com/
    API_key查看地址：https://api2d.com/forward_key/list
    API_key示例：fk203018-8OyNua...
    复制API_key到剪贴板，然后将其粘贴到api_key.txt文件中。
 
-   1.2 **input (csv)**:
+   1.2 **输入数据，放在input文件夹下的topic.csv和reply.csv中**:
 
 .. csv-table:: 回帖数据
    :align: left
@@ -71,6 +78,8 @@ root
    "topic_title", str, "话题标题"
    "topic_content", str, "话题内容，一半是话题的详细描述，这里可以空着"
 
+   1.3 **编码规则，放在coding_scheme文件夹下的coding_scheme.csv中**:
+
 .. csv-table:: 编码规则
    :align: left
    :header: "字段", "类型", "描述"
@@ -81,7 +90,10 @@ root
    "indicators", str, "编码指标"
    "example", str, "指标的示例（这一列可以不要）"
 
-2 **错误处理**: 
+编码过程中的错误处理
+>>>>>>>>>
+
+2 **编码过程中，GPT的回复可能会出现错误，错误信息和错误处理方式如下**: 
 
 查看output文件夹下面coding_error.txt文件，如果有编码错误，需要手动处理。
 
@@ -92,6 +104,7 @@ root
 **Note：**推荐使用vs code 打开coding_result.txt文件，可以它可以高亮显示大部分错误。
 
 标准的数据格式如下:
+
 .. code-block:: console
    {"reply_id":"557092","tags":["E-3"],"reason":["回帖中提到了对教师备课的重要作用，这符合编码表中的建议和思考（E-3），即对建议进行考虑"]}
 
@@ -107,6 +120,26 @@ root
 
 - 一样数据包含多个结果，但其中一个结果是错误的，如{...},reply_id...}，显然，reply_id前缺少一个“{”，请将错误的结果补全并拆分。
 
+
+编码后的结果
+>>>>>>>>>
+
+.. csv-table:: 编码结果，存储在output文件夹下的coding_result_{编码时间}.csv中
+   :align: left
+   :header: "字段", "类型", "描述"
+   :widths: 15, 10, 30
+
+   "user_id", int, "回帖的用户ID"
+   "user_name", str, "回帖的用户昵称"
+   "reply_content", str, "回帖内容"
+   "topic_id", int, "回帖的话题ID"
+   "reply_id", int, "回帖ID"
+   "to_reply_id", int, "回帖的父级回帖ID"
+   "reason", str, "编码理由，这一列可以空着"
+   "code_indicator 1", int, "0或1"
+   "code_indicator 2", int, "0或1"
+   "...", int, "0或1"
+   "code_indicator n", int, "0或1"
 
 联系方式
 -----------------
