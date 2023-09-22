@@ -15,14 +15,14 @@
    当前项目还在开发中，以后会提供更多的功能，敬请期待。
 
 
-操作流程图
+【操作流程图】
 ^^^^^^^^
 
 .. image:: ./_static/images/structure.jpg
    :alt: Structure
    :align: center
 
-项目目录结构
+【项目目录结构】
 ^^^^^^^^
 
 root
@@ -35,27 +35,36 @@ root
 
       |_ topic.csv
    |_ output
+      |_ coding_error.txt
 
+      |_ coding_result.txt
+
+      |_ coding_result_current_date.csv
    |_ AICodingAssistant.exe
 
-使用说明
+【使用说明】
 ^^^^^^^^
 
-编码前的准备工作
+「编码前的准备工作」
 >>>>>>>>>
 
 1 **在开始编码之前，你需要准备以下数据**: 
 
    1.1 **API_key，放在api_key.txt文件中**: 
+
    申请API_key，用于调用编码接口。
+   
    申请地址：https://api2d.com/
+   
    API_key查看地址：https://api2d.com/forward_key/list
+   
    API_key示例：fk203018-8OyNua...
+   
    复制API_key到剪贴板，然后将其粘贴到api_key.txt文件中。
 
    1.2 **输入数据，放在input文件夹下的topic.csv和reply.csv中**:
 
-.. csv-table:: 回帖数据
+.. csv-table:: 回帖数据：reply.csv
    :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
@@ -69,7 +78,7 @@ root
    "to_reply_id", int, "回帖的父级回帖ID"
    "reason", str, "编码理由，这一列可以空着"
 
-.. csv-table:: 话题数据
+.. csv-table:: 话题数据：topic.csv
    :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
@@ -80,7 +89,7 @@ root
 
    1.3 **编码规则，放在coding_scheme文件夹下的coding_scheme.csv中**:
 
-.. csv-table:: 编码规则
+.. csv-table:: 编码规则：coding_scheme.csv
    :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
@@ -90,7 +99,7 @@ root
    "indicators", str, "编码指标"
    "example", str, "指标的示例（这一列可以不要）"
 
-编码过程中的错误处理
+「编码过程中的错误处理」
 >>>>>>>>>
 
 2 **编码过程中，GPT的回复可能会出现错误，错误信息和错误处理方式如下**: 
@@ -101,12 +110,14 @@ root
 
 处理完毕后，删除coding_error.txt文件或删除文件中的所有数据。
 
-**Note：**推荐使用vs code 打开coding_result.txt文件，可以它可以高亮显示大部分错误。
+⚠️**注意**：推荐使用vs code 打开coding_result.txt文件，可以它可以高亮显示大部分错误。
 
 标准的数据格式如下:
 
 .. code-block:: console
+
    {"reply_id":"557092","tags":["E-3"],"reason":["回帖中提到了对教师备课的重要作用，这符合编码表中的建议和思考（E-3），即对建议进行考虑"]}
+
 
 **常见的错误有：**
 
@@ -121,10 +132,10 @@ root
 - 一样数据包含多个结果，但其中一个结果是错误的，如{...},reply_id...}，显然，reply_id前缺少一个“{”，请将错误的结果补全并拆分。
 
 
-编码后的结果
+「编码后的结果」
 >>>>>>>>>
 
-.. csv-table:: 编码结果，存储在output文件夹下的coding_result_{编码时间}.csv中
+.. csv-table:: 编码结果：coding_result_current_date.csv中
    :align: left
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
@@ -141,7 +152,8 @@ root
    "...", int, "0或1"
    "code_indicator n", int, "0或1"
 
-联系方式
+
+【联系方式】
 -----------------
 暂时写这么多吧，应该够用了，有问题可以联系我，谢谢！
 
