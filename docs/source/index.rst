@@ -28,6 +28,8 @@
 .. image:: ./_static/images/structure.jpg
    :alt: Structure
    :align: center
+   :width: 400
+   :height: 400
 
 【项目目录结构】
 ^^^^^^^^
@@ -163,6 +165,11 @@ root
    "code_indicator n", int, "0或1，1表示这一条回帖中包含了编码指标n"
 
 
+【下载地址】
+^^^^^^^^
+
+- **师大云盘**：https://pan.bnu.edu.cn/l/31Xy5N
+
 【联系方式】
 ^^^^^^^^
 暂时写这么多吧，应该够用了，有问题可以联系我，谢谢！
@@ -178,10 +185,5 @@ root
 .. image:: ./_static/images/shaw.png
    :alt: Structure
    :align: left
-   :width: 200
-   :height: 100
-
-【下载地址】
-^^^^^^^^
-
-- **师大云盘**：https://pan.bnu.edu.cn/l/31Xy5N
+   :width: 400
+   :height: 200
