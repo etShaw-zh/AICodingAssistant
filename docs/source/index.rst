@@ -1,5 +1,5 @@
-欢迎来到AICodingAssistant的文档!
-===================================
+欢迎来到 AICodingAssistant 的文档!
+^^^^^^^^
 
 .. **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 .. that creates recipes mixing random ingredients.
@@ -12,7 +12,8 @@
 
 .. note::
 
-   当前项目还在开发中，以后会提供更多的功能，敬请期待。
+   本项目是一个基于GPT-3的编码助手，目前支持对MOOC论坛中话题下的回帖数据进行编码。  
+   当前项目还在开发中，以后会提供更多的功能，敬请期待。  
 
 
 【操作流程图】
