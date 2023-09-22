@@ -107,6 +107,7 @@ root
 2 **编码过程中，GPT的回复可能会出现错误，错误信息和错误处理方式如下**: 
 
 2.1 **错误信息处理方式**:
+
 - 查看output文件夹下面coding_error.txt文件，如果有编码错误，需要手动处理。
 
 - 复制coding_error.txt中的每一行数据，到coding_result.txt文件中搜索，找到对应的数据，然后手动处理将其更正为标准数据格式。
@@ -149,11 +150,11 @@ root
    "topic_id", int, "回帖的话题ID"
    "reply_id", int, "回帖ID"
    "to_reply_id", int, "回帖的父级回帖ID"
-   "reason", str, "编码理由，这一列可以空着"
-   "code_indicator 1", int, "0或1"
-   "code_indicator 2", int, "0或1"
-   "...", int, "0或1"
-   "code_indicator n", int, "0或1"
+   "reason", str, "编码理由"
+   "code_indicator 1", int, "0或1，1表示这一条回帖中包含了编码指标1"
+   "code_indicator 2", int, "0或1，1表示这一条回帖中包含了编码指标2"
+   "...", int, "0或1，1表示这一条回帖中包含了编码指标..."
+   "code_indicator n", int, "0或1，1表示这一条回帖中包含了编码指标n"
 
 
 【联系方式】
