@@ -30,11 +30,10 @@
    1.2 **待编码的数据**:
          待编码的数据格式如下表所示：
 
-         1.2.1 **回帖数据**:
-
-.. csv-table:: Frozen Delights!
+.. csv-table:: 回帖数据
    :header: "字段", "类型", "描述"
    :widths: 15, 10, 30
+
    "index", int, "待编码文本的唯一标识符，是回帖ID"
    "user_id", int, "回帖的用户ID"
    "user_name", str, "回帖的用户昵称"
