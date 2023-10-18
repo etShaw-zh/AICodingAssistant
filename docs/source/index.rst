@@ -168,7 +168,7 @@ root
 【下载地址】
 ^^^^^^^^
 
-- https://github.com/etShaw-zh/AICodingAssistant/releases/
+- 下载地址:  https://github.com/etShaw-zh/AICodingAssistant/releases/ 
 
 【联系方式】
 ^^^^^^^^
