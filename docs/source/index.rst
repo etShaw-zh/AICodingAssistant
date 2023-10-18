@@ -168,7 +168,7 @@ root
 【下载地址】
 ^^^^^^^^
 
-- **师大云盘**：https://pan.bnu.edu.cn/l/31Xy5N
+- https://github.com/etShaw-zh/AICodingAssistant/releases/
 
 【联系方式】
 ^^^^^^^^
