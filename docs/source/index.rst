@@ -176,6 +176,8 @@ root
 
 - **微信：** etshaw8888
 
+- **个人主页：** https://xiaojianjun.cn
+
 - **微信公众号：** EdTech肖建军
 
 - **邮箱：** et_shaw@126.com
