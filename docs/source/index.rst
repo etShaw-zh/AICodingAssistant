@@ -167,11 +167,13 @@ root
 
 【下载地址】
 ^^^^^^^^
-- 下载地址:  https://github.com/etShaw-zh/AICodingAssistant/releases/ 
 .. image:: https://img.shields.io/github/v/release/etShaw-zh/AICodingAssistant
    :alt: GitHub release (with filter)
 .. image:: https://img.shields.io/github/downloads/etShaw-zh/AICodingAssistant/total
    :alt: GitHub all releases
+.. image:: https://visitor-badge.laobi.icu/badge?page_id=AICodingAssistant
+   :alt: visitors
+- 下载地址:  https://github.com/etShaw-zh/AICodingAssistant/releases/ 
 
 【联系方式】
 ^^^^^^^^

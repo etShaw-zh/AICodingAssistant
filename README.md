@@ -2,6 +2,7 @@
 
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/etShaw-zh/AICodingAssistant)
 ![GitHub all releases](https://img.shields.io/github/downloads/etShaw-zh/AICodingAssistant/total)
+![Views](https://visitor-badge.laobi.icu/badge?page_id=AICodingAssistant)
 
 ## NOTICE
 ⚠️本项目是一个基于GPT-3的编码助手,目前支持根据编码框架对MOOC论坛中话题下的回帖数据进行编码。  
