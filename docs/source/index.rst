@@ -171,13 +171,21 @@ root
 
 【下载地址】
 ^^^^^^^^
-.. image:: https://img.shields.io/github/v/release/etShaw-zh/AICodingAssistant
-   :alt: GitHub release (with filter)
-.. image:: https://img.shields.io/github/downloads/etShaw-zh/AICodingAssistant/total
-   :alt: GitHub all releases
-.. image:: https://visitor-badge.laobi.icu/badge?page_id=AICodingAssistant
-   :alt: visitors
-- 下载地址:  https://github.com/etShaw-zh/AICodingAssistant/releases/ 
+.. image:: https://img.shields.io/github/license/etShaw-zh/AICodingAssistant-Pro?color=2E75B6
+   :alt: License
+.. image:: https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-2E75B6
+   :alt: Platform
+.. image:: https://img.shields.io/github/v/release/etShaw-zh/AICodingAssistant-Pro?color=2E75B6
+   :alt: Release
+.. image:: https://img.shields.io/github/downloads/etShaw-zh/AICodingAssistant-Pro/latest/total?color=2E75B6
+   :alt: latest
+.. image:: https://readthedocs.org/projects/aicodingassistant-pro/badge/?version=latest
+   :alt: Docs
+   :target: https://xiaojianjun.cn/aicodingofficer
+.. image:: https://zenodo.org/badge/822459670.svg
+   :alt: DOI
+   :target: https://doi.org/10.5281/zenodo.14227644
+- 下载地址:  https://github.com/etShaw-zh/AICodingAssistant-Pro/releases
 
 【联系方式】
 ^^^^^^^^
